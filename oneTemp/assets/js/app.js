@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+var genreObj = {};
+
 
 $('#lyric-btn').on('click', function (){
 
@@ -28,43 +30,48 @@ $('#lyric-btn').on('click', function (){
 	    	console.log(response);
 	    	$('#genreButtons').empty();
 
-	    	var genreArray = [];
-
 	    	for (var i=0; i<response.message.body.track_list.length; i++) {
 
 	    		if (response.message.body.track_list[i].track.primary_genres.music_genre_list.length > 0) {
 
 	    		var genreName = response.message.body.track_list[i].track.primary_genres.music_genre_list[0].music_genre.music_genre_name;
 	    		var genreBool = true;
-	    		
 
-		    		for (var j=0; j < genreArray.length; j++) {
-		    			if (genreArray[j] === genreName) {
-		    				genreBool = false;
-		    			}
-		    		}
-
+		    		// for (var j=0; j < genreArray.length; j++) {
+		    		// 	if (genreArray[j] === genreName) {
+		    		// 		genreBool = false;
+		    		// 	}
+		    		// };
+		    		for (var prop in genreObj){
+		    			if (genreObj.hasOwnProperty(prop)){
+		    				if(prop === genreName){
+		    					genreBool = false;
+		    					genreObj[prop].push(response.message.body.track_list[i].track.track_id);
+		    					console.log("prop " + prop);
+		    				};
+		    			};		    			
+		    		};
 		    		// console.log(response[i]);
 		    		// console.log(genreName);
 
-		    		if (genreBool) {
-			    		var genre = $('<button class="genre">' + genreName + '</button>');
-			    		$('#genreButtons').append(genre);
-			    		genreArray.push(genreName);
-		    		}
-	    		
+		    		 if (genreBool) {
+			    	 	var genre = $('<button class="genre hasResults" onclick="getButton()">' + genreName + '</button>');
+			    	 	
+			    	 	$('#genreButtons').append(genre);
+			    	 	//genreArray.push(genreName);
+			    	 	genreObj[genreName] = [response.message.body.track_list[i].track.track_id];
+			    	 	
+		    		 };	    		
 	    		};
-	    	} 
-	    	
+	    	}; 
+	    	console.log("genreObj " + genreObj);	    	
 	    };
 
 
 
 });
 
-$('#genreButtons').on('click', function(){
 
-});
 
 });
 

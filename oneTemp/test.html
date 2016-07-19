@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>	
+	<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">	
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">		
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>	
+</head>
+<body>
+	
+	<div class="wrapper">
+		<div class="container-fluid">
+			<div class="jumbotron jumbotron-fluid">
+				<div class="container input">
+					<h1 class="display-3">Tip of the Tongue</h1>
+					<p class="lead">When you can't quite remember that song that's stuck in your head!</p>
+				</div>
+			</div>			
+			<div class="container">
+				<div class="row">
+					<div class="input">
+						<label for="lyric-input"></label>
+						<input type="text" placeholder="over the moon it shone brighter" id="lyric-input">
+						<button type="button" class="btn btn-primary-outline" id="lyric-btn">Submit</button>
+					</div>
+				</div>
+			</div>
+		</div><!-- container-fluid -->
+	</div> <!-- wrapper -->
+	<div class="container">
+		<div class="row">
+			<div id="genreButtons"></div>							
+			<div id="resultsMenu" class="accordion vertical">
+				<!-- <div id="resultsMenu" class="accordion vertical" onclick="toggleMenu()"> -->
+				<ul>
+					<li>
+						<input type="checkbox" id="checkbox-1" name="checkbox-accordion" />
+						<label for="checkbox-1">Song One</label>
+						<div class="content songInfo">
+							<h3>This is some information</h3>
+							<p>about the song, perhaspaslkfd  </p>							
+							<div class="accordian fullLyrics">								
+								<h3><a class=href="#">Lyric Snippet</a></h3>
+								<div>
+									<ul>
+										<li><h3>Lots of lyrics</h3>
+										<p>lasdjflasjdflkasjdflkjasldfjasj laksdjflkasjdf
+										asldkfjalskjf asldkfjlaksjdf
+										asdklfjaklsjiweuroiuxzbiou klasjdfoqwuegio
+										</p>
+										</li>
+									</ul>
+								</div>
+							</div><!--accordion expand for lyrics -->
+						</div>
+					</li>
+					<li>
+						<input type="checkbox" id="checkbox-2" name="checkbox-accordion" />
+						<label for="checkbox-2">Song Two</label>
+						<div class="content songInfo">
+							<h3>Another song</h3>
+							<p>and more information</p>
+							<div class="accordian fullLyrics">								
+								<h3><a class=href="#">Lyric Snippet</a></h3>
+								<div>
+									<ul>
+										<li><h3>Groovy lyrics</h3>
+										<p>las asldkfjlaksjdf
+										asdklfjaklsjiweuroiuxzbiou klasjdfoqwuegio
+										askdjfljk
+										asdkfljlaksjdfljkwiopequr9078zxv09mwe,m
+										</p>
+										</li>
+									</ul>
+								</div>
+							</div><!--accordion expand for lyrics -->
+						</div>
+					</li>
+				</ul>
+			</div><!-- resultsMenu -->  		
+				
+	</div> <!-- container -->
+<script src="assets/js/app.js"></script>
+<script src="assets/js/menuextras.js"></script>
+</body>
+</html>

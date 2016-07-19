@@ -2,23 +2,20 @@
 <html>
 <head>
 	<title></title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
-	<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-	<!--<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">-->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">	
+<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css">	 -->
 	<link rel="stylesheet" type="text/css" href="assets/css/accordion.css">
-	<script type="text/javascript"></script>
+		
 </head>
 <body>
-	<div class="wrapper">
+	<!-- <div class="wrapper">
 		<div class="container-fluid">
 			<div class="jumbotron jumbotron-fluid">
 				<div class="container input">
 					<h1 class="display-3">Tip of the Tongue</h1>
-					<p class="lead">For when you just can't quite remember that song stuck in your head.</p>
+					<p class="lead">When you can't remember that song that's stuck in your head!</p>
 				</div>
 			</div>
 
@@ -34,24 +31,173 @@
 			</div>
 
 			<div id="genreButtons"></div>
-			<div id="results"></div>
+			<div id="results"></div> -->
 			
-				
-<button class="accordion">Song 1</button>
-<div class="panel">
-  <p>Lorem ipsum...</p>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3">
+          <div class="panel panel-group" id="main">
+                      <div class="panel-body">
+                      <div class="panel-heading">  
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#main" href="#accordion"><span class="glyphicon glyphicon-folder-close"></span> Make Selection</a>
+                        </h4>  
+                        </div>
+            <div class="panel-collapse collapse panel-scroll" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-folder-close"></span> Home</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tbody><tr>
+                                    <td>
+                                        <a href="#"><span class="glyphicon glyphicon-pencil text-primary"></span> Articles</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#"><span class="glyphicon glyphicon-flash text-success"></span> News</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#"><span class="glyphicon glyphicon-file text-info"></span> About</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#"><span class="glyphicon glyphicon-comment text-success"></span> Comments</a> <span class="badge">42</span>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-user"></span> Profile</a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tbody><tr>
+                                    <td>
+                                        <a href="#">Change Password</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">Notifications</a> <span class="label label-info">9</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">Import</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#" class="text-danger"><span class="glyphicon glyphicon-trash text-danger"></span> Delete Account</a>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th"></span> Examples</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tbody><tr>
+                                    <td>
+                                        <a href="#">Orders</a> <span class="label label-success">$ 42</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">Invoices</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">Shipments</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#">Logging</a>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+							<span class="glyphicon glyphicon-file"></span> Reports</a>
+                        </h4>
+                    </div>
+                    <div id="collapseFour" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tbody><tr>
+                                    <td>
+                                        <a href="#"><span class="glyphicon glyphicon-usd"></span> Sales</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#"><span class="glyphicon glyphicon-user"></span> Customers</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#"><span class="glyphicon glyphicon-tasks"></span> Products</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                              </div>
+           
+
+    </div>
+</div>
 </div>
 
-<button class="accordion">Song 2</button>
-<div class="panel">
-  <p>Lorem ipsum...</p>
-</div>
 
-<button class="accordion">Song 3</button>
-<div class="panel">
-  <p>Lorem ipsum...</p>
-</div>					
-		<script src="assets/js/app.js"></script>
-		<script src="assets/js/testdrops.js"></script>
+            <div id="push"></div>
+        				
+
+<!-- 
+<script type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/testdrops.js"></script> -->
 	</body>
 	</html>
